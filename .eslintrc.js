@@ -1,16 +1,19 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
+  'parser': '@typescript-eslint/parser',
+  'parserOptions': {
     project: './tsconfig.json'
   },
-  plugins: [
+  'plugins': [
     'react',
     '@typescript-eslint',
     'unused-imports',
     'typescript-sort-keys',
     'import'
   ],
-  extends: [
+  'globals': {
+    'JSX': true
+  },
+  'extends': [
     'next',
     'next/core-web-vitals',
     'standard-with-typescript',
@@ -21,7 +24,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:import/recommended'
   ],
-  rules: {
+  'rules': {
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
     '@typescript-eslint/prefer-reduce-type-parameter': 'off',
     '@typescript-eslint/prefer-ts-expect-error': 'off',
@@ -147,7 +150,7 @@ module.exports = {
       }
     ]
   },
-  env: {
+  'env': {
     jest: true
   }
 }

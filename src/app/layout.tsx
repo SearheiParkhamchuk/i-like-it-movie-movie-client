@@ -1,5 +1,7 @@
 import { type ReactNode } from 'react'
 
+import { ThemeProvider } from '@/01-app/theme/lib/ThemeProvider'
+
 export default function RootLayout({
   children
 }: Readonly<{
@@ -8,7 +10,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
